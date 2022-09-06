@@ -1,11 +1,13 @@
 Metadata-Version: 2.1
 Name: firebmail
 Version: 0.1
-Summary: A Django app to conduct web-based polls.
-Home-page: fireportf.herokuapp.com
-Author: Lord Firebreather
-Author-email: lordfirebcorps@gmail.com
-License: BSD-3-Clause # Example license
-Requires-Python: >=3.8
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: firebreather
+Author-email: dtenny95@gmail.com
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE.rst
 
-<h1>Check the docs for more information</h1>
+UNKNOWN
+
