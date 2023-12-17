@@ -1,17 +1,3 @@
-Metadata-Version: 2.1
-Name: firebmail
-Version: 0.1.2
-Summary: An email sending utility for python
-Author-email: lordfirebcorps@gmail.com
-Project-URL: Homepage, https://github.com/firebreather-heart/firebmail
-Project-URL: Issues, https://github.com/firebreather-heart/firebmail/issues
-Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: MIT License
-Classifier: Operating System :: OS Independent
-Requires-Python: >=3.8
-Description-Content-Type: text/markdown
-License-File: LICENSE.md
-
 # firemail
 
 `firemail` is a simple Python module for sending emails using the SMTP protocol. It allows you to send plain text or HTML emails and optionally attach files. The module is designed to work with Gmail by default but can be configured for other SMTP servers as well.
@@ -28,7 +14,7 @@ pip install firemail
 ## Usage
 ```python
 import os
-from firemail import sendmail
+from firebmail.firebmail import sendmail
 
 # Set environment variables for your email credentials
 os.environ['SENDER'] = 'your_email@gmail.com'

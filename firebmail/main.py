@@ -1,19 +1,9 @@
 import smtplib
-import ssl,os,dotenv
+import ssl,os
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
-from dotenv import load_dotenv
-from pathlib import Path 
 
-dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
-load_dotenv(dotenv_path)
-
-BASE_DIR = Path(__file__).resolve().parent
-dotenv_file = os.path.join(BASE_DIR,'.env')
-
-if os.path.isfile(dotenv_file):
-    dotenv.load_dotenv(dotenv_file)
 
 SENDER = str(os.getenv('SENDER'))
 PASSWORD = str(os.getenv('PASSWORD'))
@@ -22,7 +12,14 @@ ctx = ssl.create_default_context()
 default_subject = "Message from firemail"
 
 
-def sendmail(payload: str, recipient:str, subject:str = default_subject, sender:str =SENDER, password:str = PASSWORD, type='plain', filepath:str=None, client='smtp.gmail.com'):
+def sendmail(payload: str, 
+             recipient:str, 
+             subject:str = default_subject, 
+             sender:str =SENDER, 
+             password:str = PASSWORD, 
+             type='plain', 
+             filepath = None, 
+             client='smtp.gmail.com'):
     """
         >>> payload:    is the string containing the message, either in plain text or html format
         >>> recipient:  is the email address of the reciever

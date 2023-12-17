@@ -1,1 +1,0 @@
-<h1>Check the docs for more information</h1>

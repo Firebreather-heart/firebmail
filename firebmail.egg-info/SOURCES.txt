@@ -1,11 +1,10 @@
-LICENSE.rst
+LICENSE.md
 MANIFEST.in
-README.rst
+README.md
 pyproject.toml
-setup.cfg
-setup.py
+firebmail/__init__.py
+firebmail/main.py
 firebmail.egg-info/PKG-INFO
 firebmail.egg-info/SOURCES.txt
 firebmail.egg-info/dependency_links.txt
-firebmail.egg-info/requires.txt
 firebmail.egg-info/top_level.txt

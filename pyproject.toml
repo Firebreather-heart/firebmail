@@ -1,3 +1,23 @@
 [build-system]
 requires = ['setuptools>=40.8.0', 'wheel']
 build-backend = 'setuptools.build_meta:__legacy__'
+
+
+[project]
+name = "firebmail"
+version = "0.1.2"
+authors = [
+  { name="", email="lordfirebcorps@gmail.com" },
+]
+description = "An email sending utility for python"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/firebreather-heart/firebmail"
+Issues = "https://github.com/firebreather-heart/firebmail/issues"
