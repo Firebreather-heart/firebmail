@@ -43,7 +43,7 @@ client: The name of the client (default is 'smtp.gmail.com'). Attempts to use un
 ## Example with attachment
 ```python
 import os
-from firemail import sendmail
+from firebmail.firebmail import sendmail
 
 # Set environment variables for your email credentials
 os.environ['SENDER'] = 'your_email@gmail.com'
