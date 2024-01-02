@@ -14,7 +14,7 @@ pip install firemail
 ## Usage
 ```python
 import os
-from firebmail.firebmail import sendmail
+from firebmail import sendmail
 
 # Set environment variables for your email credentials
 os.environ['SENDER'] = 'your_email@gmail.com'
