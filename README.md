@@ -16,16 +16,15 @@ pip install firemail
 import os
 from firebmail import sendmail
 
-# Set environment variables for your email credentials
-os.environ['SENDER'] = 'your_email@gmail.com'
-os.environ['PASSWORD'] = 'your_app_password'
 
 # Example usage
+sender = "yourmail@example.com"
+password = "your_app_password"
 payload = "Hello, this is a test email!"
 recipient = "recipient_email@example.com"
 subject = "Test Email"
 
-sendmail(payload, recipient, subject)
+sendmail(payload, recipient, sender,password, subject)
 ```
 
 ## Function Parameters
@@ -33,9 +32,9 @@ The sendmail function has the following parameters:
 
 payload: The string containing the message, either in plain text or HTML format.
 recipient: The email address of the recipient.
+sender: Your email address 
+password: Your app password 
 subject: The email subject (default is "Message from firemail").
-sender: Your email address (default is taken from the environment variable 'SENDER').
-password: Your app password (default is taken from the environment variable 'PASSWORD').
 type: The type of payload, either 'plain' or 'html' (default is 'plain').
 filepath: The path of the email attachment, default is None.
 client: The name of the client (default is 'smtp.gmail.com'). Attempts to use unrelated mail services may result in failure
@@ -45,17 +44,17 @@ client: The name of the client (default is 'smtp.gmail.com'). Attempts to use un
 import os
 from firebmail.firebmail import sendmail
 
-# Set environment variables for your email credentials
-os.environ['SENDER'] = 'your_email@gmail.com'
-os.environ['PASSWORD'] = 'your_app_password'
+
 
 # Example usage with attachment
+sender = "yourmail@example.com"
+password = "your_app_password"
 payload = "Hello, this email includes an attachment."
 recipient = "recipient_email@example.com"
 subject = "Email with Attachment"
 filepath = "path/to/your/file.pdf"
 
-sendmail(payload, recipient, subject, filepath=filepath)
+sendmail(payload, recipient,sender, password, subject, filepath=filepath)
 ```
 
 ## Note
