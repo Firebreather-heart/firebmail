@@ -35,7 +35,7 @@ recipient: The email address of the recipient.
 sender: Your email address 
 password: Your app password 
 subject: The email subject (default is "Message from firemail").
-type: The type of payload, either 'plain' or 'html' (default is 'plain').
+type_: The type of payload, either 'plain' or 'html' (default is 'plain').
 filepath: The path of the email attachment, default is None.
 client: The name of the client (default is 'smtp.gmail.com'). Attempts to use unrelated mail services may result in failure
 
@@ -57,6 +57,24 @@ filepath = "path/to/your/file.pdf"
 sendmail(payload, recipient,sender, password, subject, filepath=filepath)
 ```
 
+## Sending Batch Mail
+
+Using the `sendmail` function in a loop to send multiple emails can be inefficient, because it authenticates each time; instead use the BatchMail class to send multiple emails efficiently.
+
+```python
+from firebmail import BatchMail
+
+sender = "mymail@example.com"
+password = "my app password"
+
+payload = "Hello, this is a test email!"
+subject = "Test Email"
+
+batch = BatchMail(sender = sender, password = password, subject=subject, payload=payload)
+batch.send_batch(['test1@gmail.com', 'test2@gmail.com', 'test3@gmail.com'])
+```
+
+
 ## Note
 Make sure to use this module responsibly and adhere to the email sending policies of your email service provider. Additionally, consider using application-specific passwords for enhanced security.
 
@@ -66,7 +84,7 @@ For Gmail users, you can generate an app password by following the instructions 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. For major changes, please open an issdriveue first to discuss what you would like to change.
 
 ## Issues
 If you encounter any issues, feel free to open an issue in the repository.

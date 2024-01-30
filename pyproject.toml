@@ -5,7 +5,7 @@ build-backend = 'setuptools.build_meta:__legacy__'
 
 [project]
 name = "firebmail"
-version = "0.1.2"
+version = "0.1.4"
 authors = [
   { name="", email="lordfirebcorps@gmail.com" },
 ]
