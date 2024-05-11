@@ -1,13 +1,13 @@
-# firemail
+# firebmail
 
-`firemail` is a simple Python module for sending emails using the SMTP protocol. It allows you to send plain text or HTML emails and optionally attach files. The module is designed to work with Gmail by default but can be configured for other SMTP servers as well.
+`firebmail` is a simple Python module for sending emails using the SMTP protocol. It allows you to send plain text or HTML emails and optionally attach files. The module is designed to work with Gmail by default but can be configured for other SMTP servers as well.
 
 ## Installation
 
-To use `firemail`, you can install it via pip:
+To use `firebmail`, you can install it via pip:
 
 ```bash
-pip install firemail
+pip install firebmail
 
 ```
 
